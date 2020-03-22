@@ -26,7 +26,7 @@ config  Dockerfile  elasticsearch.tar.gz  jdk-11.0.6.tar.gz  kibana.tar.gz  logs
   # Xây dựng images logstash
 [root@bsnoname elk]#docker build -t logstash:7.6.1 -f Dockerfile/logstash .
 
-# Sau khi xây dựng xong các image ở trên các bác run images đã buil thành container
+# Sau khi xây dựng xong các image ở trên các bạn run images đã buil thành container
   # Chạy container elasticsearch
 [root@bsnoname elk]#docker run -d -p 9200:9200 -p 9300:9300 elasticsearch:7.6.1
 
