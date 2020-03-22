@@ -18,7 +18,10 @@ Bài viết này chia sẻ cài đặt ELK bằng dockerfile tất cả từ loc
 [root@bsnoname elk]# ls
 config  Dockerfile  elasticsearch.tar.gz  jdk-11.0.6.tar.gz  kibana.tar.gz  logstash.tar.gz
 
-# Chạy Dockerfile để build imgaes. Lưu ý : Dockerfile của bạn hiện đang nằm trong Dockerfile tôi để ở trên các bạn phải dowload về và đưa vào cùng 1 thư mục
+# Chạy Dockerfile để build imgaes.
+# Lưu ý : Dockerfile của bạn hiện đang nằm trong Dockerfile tôi để ở trên các bạn phải dowload về và đưa vào cùng 1 thư mục
+  
+  
   # Xây dựng images elasticsearch
 [root@bsnoname elk]#docker build -t elasticsearch:7.6.1 -f Dockerfile/elasticsearch .
   # Xây dựng images kibana
@@ -26,7 +29,9 @@ config  Dockerfile  elasticsearch.tar.gz  jdk-11.0.6.tar.gz  kibana.tar.gz  logs
   # Xây dựng images logstash
 [root@bsnoname elk]#docker build -t logstash:7.6.1 -f Dockerfile/logstash .
 
+
 # Sau khi xây dựng xong các image ở trên các bạn run images đã buil thành container
+
   # Chạy container elasticsearch
 [root@bsnoname elk]#docker run -d -p 9200:9200 -p 9300:9300 elasticsearch:7.6.1
 
@@ -37,7 +42,7 @@ http//:Địa chỉ ip:9200 để xem kết quả
 
 http://Địa chỉ IP:5601/
 
-# Chạy container logstash
+  # Chạy container logstash
 [root@bsnoname elk]#docker run -d -p 5504:5504 logstash:7.6.1
 
 Để kiểm tra các bạn có thể đăng nhập vào hẳn container để xem kết quả
