@@ -1,0 +1,31 @@
+FROM centos:7
+
+ADD ./elasticsearch.tar.gz /opt
+ADD ./config/elasticsearch.yml /opt/elasticsearch-7.6.1/config/elasticsearch.yml
+ADD ./jdk-11.0.6.tar.gz /opt
+ADD ./config/jdkconfig /etc/profile
+
+WORKDIR /opt
+
+RUN mv jdk-11.0.6 jdk
+
+ENV JAVA_HOME=/opt/jdk
+
+RUN ["alternatives", "--install", "/usr/bin/java", "java", "/opt/jdk/bin/java", "150"]
+
+WORKDIR /opt/elasticsearch-7.6.1
+
+RUN adduser elasticsearch
+
+RUN chown -R elasticsearch. /opt/elasticsearch-7.6.1
+
+USER elasticsearch
+RUN pwd
+
+WORKDIR /opt/elasticsearch-7.6.1/bin
+ENV PATH=$PATH:/opt/elasticsearch-7.6.1/bin
+
+CMD ["elasticsearch"]
+
+EXPOSE 9200
+EXPOSE 9300
