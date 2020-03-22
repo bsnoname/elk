@@ -1,6 +1,6 @@
 Bài viết này chia sẻ cài đặt ELK bằng dockerfile tất cả từ local.
 # Cài đặt ELK trên Docker localhost sử dụng dockerfile. Dowload 4 file nén và 1 file images nền tảng về yêu cầu chọn bản TAR.GZ linux 64-bit
-  # File images nền tảng các bạn dowload về https://hub.docker.com/_/centos với tên file là: centos:7.
+  # File images nền tảng các bạn dowload về https://hub.docker.com/_/centos với tên file là: centos:7. có thể pull về và backup lại rồi đưa vào thư mục bên dưới:
   # 1: Dowload elasticsearch.tar.gz
   Link Dowload:https://www.elastic.co/downloads/elasticsearch
   # 2: kibana.tar.gz
@@ -10,7 +10,7 @@ Bài viết này chia sẻ cài đặt ELK bằng dockerfile tất cả từ loc
   # 4: jdk-11.0.6.tar.gz
   Link Dowload:https://www.oracle.com/java/technologies/javase-jdk11-downloads.html
 
-# Tất cả file nén đã dowload ở trên các bạn đưa vào 1 thư mục và đổi tên như ở dưới
+# Tất cả file nén đã dowload ở trên các bạn đưa vào 1 thư mục và đổi tên như thế này
 [root@bsnoname elk]# ls
 config  Dockerfile  elasticsearch.tar.gz  jdk-11.0.6.tar.gz  kibana.tar.gz  logstash.tar.gz
 
