@@ -1,4 +1,4 @@
-# Để cài đặt ELK trên Docker sử dụng dockerfile Các bạn dowload 4 file nén về yêu cầu chọn bản TAR.GZ linux 64-bit
+# Cài đặt ELK trên Docker localhost sử dụng dockerfile. Dowload 4 file nén về yêu cầu chọn bản TAR.GZ linux 64-bit
   # 1: Dowload elasticsearch.tar.gz
   Link Dowload:https://www.elastic.co/downloads/elasticsearch
   # 2: kibana.tar.gz
