@@ -7,11 +7,11 @@ Bài viết này chia sẻ cài đặt ELK bằng dockerfile tất cả từ loc
   
   # 1: Dowload elasticsearch.tar.gz
   Link Dowload:https://www.elastic.co/downloads/elasticsearch
-  # 2: kibana.tar.gz
+  # 2: Dowload kibana.tar.gz
   Link Dowload https://www.elastic.co/downloads/kibana
-  # 3: logstash.tar.gz
+  # 3: Dowload logstash.tar.gz
   Link Dowload:https://www.elastic.co/downloads/logstash
-  # 4: jdk-11.0.6.tar.gz
+  # 4: Dowload jdk-11.0.6.tar.gz
   Link Dowload:https://www.oracle.com/java/technologies/javase-jdk11-downloads.html
 
 # Tất cả file nén đã dowload ở trên các bạn đưa vào 1 thư mục và đổi tên như thế này
