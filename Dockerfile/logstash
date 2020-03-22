@@ -1,0 +1,29 @@
+FROM centos:7
+
+ADD ./logstash.tar.gz /opt
+ADD ./config/logstash-sample.conf /opt/logstash-7.6.1/config/logstash-sample.conf
+ADD ./jdk-11.0.6.tar.gz /opt
+ADD ./config/jdkconfig /etc/profile
+
+WORKDIR /opt
+
+RUN mv jdk-11.0.6 jdk
+
+ENV JAVA_HOME=/opt/jdk
+
+RUN ["alternatives", "--install", "/usr/bin/java", "java", "/opt/jdk/bin/java", "150"]
+
+WORKDIR /opt/logstash-7.6.1
+
+RUN adduser logstash
+
+RUN chown -R logstash. /opt/logstash-7.6.1
+
+USER logstash
+
+WORKDIR /opt/logstash-7.6.1/bin
+ENV PATH=$PATH:/opt/logstash-7.6.1/bin
+
+CMD ["logstash"]
+
+EXPOSE 5044
