@@ -15,9 +15,9 @@ Bài viết này chia sẻ cài đặt ELK bằng dockerfile tất cả từ loc
   Link Dowload:https://www.oracle.com/java/technologies/javase-jdk11-downloads.html
 
 # Tất cả file nén đã dowload ở trên các bạn đưa vào 1 thư mục và đổi tên như thế này
-[root@bsnoname elk]# ls config 
+[root@bsnoname elk]# ls
 
-Dockerfile  elasticsearch.tar.gz  jdk-11.0.6.tar.gz  kibana.tar.gz  logstash.tar.gz
+config Dockerfile  elasticsearch.tar.gz  jdk-11.0.6.tar.gz  kibana.tar.gz  logstash.tar.gz
 
 # Chạy Dockerfile để build imgaes.
 # Lưu ý : Dockerfile của bạn hiện đang nằm trong Dockerfile tôi để ở trên các bạn phải dowload về và đưa vào cùng 1 thư mục
