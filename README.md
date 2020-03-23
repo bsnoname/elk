@@ -16,6 +16,7 @@ Bài viết này chia sẻ cài đặt ELK bằng dockerfile tất cả từ loc
 
 # Tất cả file nén đã dowload ở trên các bạn đưa vào 1 thư mục và đổi tên như thế này
 [root@bsnoname elk]# ls
+
 config  Dockerfile  elasticsearch.tar.gz  jdk-11.0.6.tar.gz  kibana.tar.gz  logstash.tar.gz
 
 # Chạy Dockerfile để build imgaes.
